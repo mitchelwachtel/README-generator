@@ -1,8 +1,14 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const build = require("./buildreadme.js");
 
 inquirer
   .prompt([
+    {
+      type: "input",
+      message: "Provide your name:",
+      name: "title",
+    },
     {
       type: "input",
       message: "Provide title of the project:",
@@ -52,9 +58,10 @@ inquirer
   ])
   .then((data) => {
     console.log(data);
+
     const file = `README${data.title}.md`;
 
-    fs.writeFile(file, `# ${data.title}\n\n## ${data.email}\n\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Tests](#tests)\n* [Questions](#questions)\n`, (err) =>
+    fs.writeFile(file, build.header(data), (err) =>
       err ? console.error(err) : console.log("Success!")
     );
 

@@ -1,22 +1,45 @@
+// This entire js file is used to make the index.js more legible once I realized how tedious it would be to read/write this if it was one line of code.
 // BASIC HEADER
-const header = `# ${data.title}\n---\n## ${data.email}\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
+const header = (data) => {
+  return `# ${data.title}\n## ${data.name} - ${data.email}\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
+};
 
-// append Description
-const DescSect
+// function to create Description
+const description = (data) => {
+  return ``;
+};
 
-// append Installation
-const InstallSect
+// function to create Installation
+const install = (data) => {
+  return ``;
+};
 
-// append Usage
-const UsageSect
+// function to create Usage
+const usage = (data) => {
+  return ``;
+};
 
-// append License
-const LicSect
+// function to create License
+const license = (data) => {
+  return ``;
+};
 
-// append Tests
-const TestSect
+// function to create Tests
+const tests = (data) => {
+  return ``;
+};
 
-// append Questions
-const QuestSect
+// function to create Questions
+const questions = (data) => {
+  return ``;
+};
 
-
+module.exports = {
+  header,
+  description,
+  install,
+  usage,
+  license,
+  tests,
+  questions,
+};
