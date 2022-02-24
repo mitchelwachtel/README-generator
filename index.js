@@ -52,8 +52,15 @@ inquirer
   ])
   .then((data) => {
     console.log(data);
+    const file = `README${data.title}.md`;
+
+    fs.writeFile(file, `# ${data.title}\n\n## ${data.email}\n\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Tests](#tests)\n* [Questions](#questions)\n`, (err) =>
+      err ? console.error(err) : console.log("Success!")
+    );
+
+    // fs.appendFile(file, `## {data.email}\n\n`)
   });
-//     const fileName = `${data.name}.html`;
+
 //     const contents = `<!DOCTYPE html> <html> <head> <title>${data.name}</title> </head> <body style="text-align: center;"> <h1>${data.name}</h1> <div style="margin: 10px; padding: 10px;"> <p>Location: ${data.location}</p> <p>LinkedIn: ${data.linkedin}</p> <p>GitHub: ${data.github}</p> <p>Bio: ${data.bio}</p> </div> </body> </html> `;
 
 //     fs.writeFile(fileName, contents, (err) =>
