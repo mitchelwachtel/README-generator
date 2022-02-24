@@ -7,7 +7,7 @@ inquirer
     {
       type: "input",
       message: "Provide your name:",
-      name: "title",
+      name: "name",
     },
     {
       type: "input",
@@ -65,9 +65,30 @@ inquirer
       err ? console.error(err) : console.log("Success!")
     );
 
-    // fs.appendFile(file, `## {data.email}\n\n`)
-  });
+    fs.appendFile(file, build.description(data), (err) =>
+      err ? console.error(err) : console.log("Success!")
+    );
 
+    fs.appendFile(file, build.install(data), (err) =>
+      err ? console.error(err) : console.log("Success!")
+    );
+
+    fs.appendFile(file, build.usage(data), (err) =>
+      err ? console.error(err) : console.log("Success!")
+    );
+
+    fs.appendFile(file, build.license(data), (err) =>
+      err ? console.error(err) : console.log("Success!")
+    );
+
+    fs.appendFile(file, build.tests(data), (err) =>
+      err ? console.error(err) : console.log("Success!")
+    );
+
+    fs.appendFile(file, build.questions(data), (err) =>
+      err ? console.error(err) : console.log("Success!")
+    );
+  });
 //     const contents = `<!DOCTYPE html> <html> <head> <title>${data.name}</title> </head> <body style="text-align: center;"> <h1>${data.name}</h1> <div style="margin: 10px; padding: 10px;"> <p>Location: ${data.location}</p> <p>LinkedIn: ${data.linkedin}</p> <p>GitHub: ${data.github}</p> <p>Bio: ${data.bio}</p> </div> </body> </html> `;
 
 //     fs.writeFile(fileName, contents, (err) =>
