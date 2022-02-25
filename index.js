@@ -42,7 +42,7 @@ const questions = [
     type: "list",
     message: "Select the license that applies to this application:",
     name: "license",
-    choices: ["MIT", "GNU"],
+    choices: ["MIT", "GNU", "Apache"],
   },
   {
     type: "input",
@@ -64,32 +64,4 @@ inquirer.prompt(questions).then((data) => {
   fs.writeFile(file, build.putStringTogether(data), (err) =>
     err ? console.error(err) : console.log("Success!")
   );
-
-  // fs.appendFile(file, build.description(data), (err) =>
-  //   err ? console.error(err) : console.log("Success!")
-  // );
-
-  // fs.appendFile(file, build.install(data), (err) =>
-  //   err ? console.error(err) : console.log("Success!")
-  // );
-
-  // fs.appendFile(file, build.usage(data), (err) =>
-  //   err ? console.error(err) : console.log("Success!")
-  // );
-
-  // fs.appendFile(file, build.license(data), (err) =>
-  //   err ? console.error(err) : console.log("Success!")
-  // );
-
-  // fs.appendFile(file, build.contribution(data), (err) =>
-  //   err ? console.error(err) : console.log("Success!")
-  // );
-
-  // fs.appendFile(file, build.tests(data), (err) =>
-  //   err ? console.error(err) : console.log("Success!")
-  // );
-
-  // fs.appendFile(file, build.questions(data), (err) =>
-  //   err ? console.error(err) : console.log("Success!")
-  // );
 });

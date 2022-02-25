@@ -1,10 +1,22 @@
 // This entire js file is used to make the index.js more legible once I realized how tedious it would be to read/write this if it was one line of code.
 // BASIC HEADER
 const header = (data) => {
+  renderLicenseBadge = (license) => {
+    if (license == "GNU") {
+      return "![GNU General Public License v3.0 logo](./assets/images/gnu.png)";
+    } else if (license == "MIT") {
+      return "![MIT License logo](./assets/images/mit.png)";
+    } else if (license == "Apache") {
+      return "![Apache License 2.0 logo](./assets/images/apache.png)";
+    } else {
+      return "";
+    }
+  };
+  const badge = renderLicenseBadge(data.license);
   if (data.name !== null) {
-    return `# ${data.title}\n## ${data.name} - ${data.email}\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
+    return `# ${data.title}\n## ${data.name} - ${data.email}\t${badge}\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
   } else {
-    return `# ${data.title}\n## ${data.email}\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
+    return `# ${data.title}\n## ${data.email}\t${badge}\n\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
   }
 };
 
@@ -25,7 +37,31 @@ const usage = (data) => {
 
 // function to create License Section
 const license = (data) => {
-  return `### License\n${data.license}\n\n---\n`;
+  renderLicenseBadge = (license) => {
+    if (license == "GNU") {
+      return "GNU General Public License v3.0\n\n![GNU General Public License v3.0 logo](./assets/images/gnu.png)";
+    } else if (license == "MIT") {
+      return "MIT License\n\n![MIT License logo](./assets/images/mit.png)";
+    } else if (license == "Apache") {
+      return "Apache License 2.0\n\n![Apache License 2.0 logo](./assets/images/apache.png)";
+    } else {
+      return "";
+    }
+  };
+  renderLicenseLink = (license) => {
+    if (license == "GNU") {
+      return "Read more about the GNU General Public License v3.0 *[here](https://www.gnu.org/licenses/gpl-3.0.en.html)*.";
+    } else if (license == "MIT") {
+      return "Read more about the MIT License *[here](https://opensource.org/licenses/MIT)*.";
+    } else if (license == "Apache") {
+      return "Read more about the Apache License 2.0 *[here](https://www.apache.org/licenses/LICENSE-2.0)*.";
+    } else {
+      return "";
+    }
+  };
+  const badge = renderLicenseBadge(data.license);
+  const link = renderLicenseLink(data.license);
+  return `### License\n\n${badge}\n\n${link}\n\n---\n`;
 };
 
 // function to create Contributions Section
