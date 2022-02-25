@@ -14,9 +14,9 @@ const header = (data) => {
   };
   const badge = renderLicenseBadge(data.license);
   if (data.name !== null) {
-    return `# ${data.title}\n## ${data.name} - ${data.email}\t${badge}\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
+    return `# ${data.title}\n## ${data.name} - ${data.email}\n\n${badge}\n\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
   } else {
-    return `# ${data.title}\n## ${data.email}\t${badge}\n\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
+    return `# ${data.title}\n## ${data.email}\n\n${badge}\n\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
   }
 };
 
