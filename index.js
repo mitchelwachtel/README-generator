@@ -59,7 +59,7 @@ const questions = [
 inquirer.prompt(questions).then((data) => {
   console.log(data);
 
-  const file = `README${data.title}.md`;
+  const file = `./created-READMEs/README.md`;
 
   fs.writeFile(file, build.putStringTogether(data), (err) =>
     err ? console.error(err) : console.log("Success!")
