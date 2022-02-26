@@ -2,11 +2,11 @@
 // BASIC HEADER
 const header = (data) => {
   renderLicenseBadge = (license) => {
-    if (license == "GNU") {
+    if (license == "GNU General Public License v3.0") {
       return "![GNU General Public License v3.0 logo](./assets/images/gnu.png)";
-    } else if (license == "MIT") {
+    } else if (license == "MIT License") {
       return "![MIT License logo](./assets/images/mit.png)";
-    } else if (license == "Apache") {
+    } else if (license == "Apache License 2.0") {
       return "![Apache License 2.0 logo](./assets/images/apache.png)";
     } else {
       return "";
@@ -38,11 +38,11 @@ const usage = (data) => {
 // function to create License Section
 const license = (data) => {
   renderLicenseBadge = (license) => {
-    if (license == "GNU") {
+    if (license == "GNU General Public License v3.0") {
       return "GNU General Public License v3.0\n\n![GNU General Public License v3.0 logo](./assets/images/gnu.png)";
-    } else if (license == "MIT") {
+    } else if (license == "MIT License") {
       return "MIT License\n\n![MIT License logo](./assets/images/mit.png)";
-    } else if (license == "Apache") {
+    } else if (license == "Apache License 2.0") {
       return "Apache License 2.0\n\n![Apache License 2.0 logo](./assets/images/apache.png)";
     } else {
       return "";

@@ -42,7 +42,7 @@ const questions = [
     type: "list",
     message: "Select the license that applies to this application:",
     name: "license",
-    choices: ["MIT", "GNU", "Apache"],
+    choices: ["MIT License", "GNU General Public License v3.0", "Apache License 2.0"],
   },
   {
     type: "input",
