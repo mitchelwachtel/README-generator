@@ -49,11 +49,11 @@ const license = (data) => {
     }
   };
   renderLicenseLink = (license) => {
-    if (license == "GNU") {
+    if (license == "GNU General Public License v3.0") {
       return "Read more about the GNU General Public License v3.0 *[here](https://www.gnu.org/licenses/gpl-3.0.en.html)*.";
-    } else if (license == "MIT") {
+    } else if (license == "MIT License") {
       return "Read more about the MIT License *[here](https://opensource.org/licenses/MIT)*.";
-    } else if (license == "Apache") {
+    } else if (license == "Apache License 2.0") {
       return "Read more about the Apache License 2.0 *[here](https://www.apache.org/licenses/LICENSE-2.0)*.";
     } else {
       return "";
@@ -76,7 +76,7 @@ const tests = (data) => {
 
 // function to create Questions Section
 const questions = (data) => {
-  return `### Questions\nPlease send me an email at ${data.email} and I'll be quick to get back to you! Find me on GitHub at https://github.com/${data.github}\n\n`;
+  return `### Questions\nIf you have any questions, please send me an email at ${data.email} and I'll be quick to get back to you! Find me on GitHub at https://github.com/${data.github}\n\n`;
 };
 
 const putStringTogether = (data) => {
