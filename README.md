@@ -1,7 +1,7 @@
 # README Generator
 ## Mitchel Wachtel - mitchel.wachtel@gmail.com
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 ### Table of contents
@@ -27,9 +27,7 @@ The application will run through a series of questions in your terminal. Answer 
 ---
 ### License
 
-MIT License
-
-![MIT License logo](./assets/images/mit.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Read more about the MIT License *[here](https://opensource.org/licenses/MIT)*.
 

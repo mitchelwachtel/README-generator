@@ -15,28 +15,32 @@ const questions = [
   },
   {
     type: "input",
-    message: "Describe the project:",
+    message: "Provide a short description this project:",
     name: "description",
   },
   {
     type: "input",
-    message: "Provide installation instructions:",
+    message: "Provide the command that should be run to install dependencies:",
     name: "installation",
+    default: 'npm i',
+    // have (npm i) as default somehow
   },
   {
     type: "input",
-    message: "Provide usage information:",
+    message: "Provide helpful information for user attempting to use this repository:",
     name: "usage",
   },
   {
     type: "input",
-    message: "Provide contribution guidelines:",
+    message: "Users will be provided your email if they wish to contribute to the repo. \nIf there is anything else you would like the user to know about contributions, please provide that here. \nIf not, please leave this blank.",
     name: "contribution",
   },
   {
     type: "input",
-    message: "Provide test instructions:",
+    message: "Provide the command users should run in order to run tests:",
     name: "test",
+    default: 'npm test',
+    // have (npm test) as default
   },
   {
     type: "list",

@@ -1,7 +1,7 @@
-# ALSO COOL
-## WACHTEL - m
+# 
+##  - 
 
-![Apache License 2.0 logo](../assets/images/apache.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 ### Table of contents
@@ -14,11 +14,11 @@
 * [Questions](#questions)
 ---
 ### Description
-kmwe
+
 
 ---
 ### Installation
-
+npm i
 
 ---
 ### Usage
@@ -27,11 +27,9 @@ kmwe
 ---
 ### License
 
-Apache License 2.0
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Apache License 2.0 logo](../assets/images/apache.png)
-
-Read more about the Apache License 2.0 *[here](https://www.apache.org/licenses/LICENSE-2.0)*.
+Read more about the MIT License *[here](https://opensource.org/licenses/MIT)*.
 
 ---
 ### Contributing
@@ -39,9 +37,9 @@ Read more about the Apache License 2.0 *[here](https://www.apache.org/licenses/L
 
 ---
 ### Tests
-
+npm test
 
 ---
 ### Questions
-If you have any questions, please send me an email at m and I'll be quick to get back to you! Find me on GitHub at https://github.com/mekw
+If you have any questions, please send me an email at  and I'll be quick to get back to you! Find me on GitHub at https://github.com/
 
