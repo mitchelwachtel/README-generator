@@ -14,9 +14,9 @@ const header = (data) => {
   };
   const badge = renderLicenseBadge(data.license);
   if (data.name !== null) {
-    return `# ${data.title}\n## ${data.name} - ${data.email}\n\n${badge}\n\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
+    return `# ${data.title}\n## ${data.name} - ${data.email}\n\n${badge}\n\n---\n`;
   } else {
-    return `# ${data.title}\n## ${data.email}\n\n${badge}\n\n---\n### Table of contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
+    return `# ${data.title}\n## ${data.email}\n\n${badge}\n\n---\n`;
   }
 };
 
@@ -25,9 +25,13 @@ const description = (data) => {
   return `### Description\n${data.description}\n\n---\n`;
 };
 
+const tableOfContents = (data) => {
+  return `### Table of contents\n* [Installation](#installation)\n* [Usage](#usage)\n* [License](#license)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Questions](#questions)\n---\n`;
+};
+
 // function to create Installation Section
 const install = (data) => {
-  return `### Installation\n${data.installation}\n\n---\n`;
+  return '### Installation\nTo install the dependencies necessary to run use the application, the user should run the following command first:\n\n`' + data.installation + '`\n\n---\n';
 };
 
 // function to create Usage Section
@@ -66,23 +70,24 @@ const license = (data) => {
 
 // function to create Contributions Section
 const contribution = (data) => {
-  return `### Contributing\n${data.contribution}\n\n---\n`;
+  return `### Contributing\nPlease contact ${data.email} if you have any desire to contribute to this project.\n\n${data.contribution}\n\n---\n`;
 };
 
 // function to create Tests Section
 const tests = (data) => {
-  return `### Tests\n${data.test}\n\n---\n`;
+  return '### Tests\nTo run tests on the application, the user should run the following command:\n\n`' + data.test + '`\n\n---\n';
 };
 
 // function to create Questions Section
 const questions = (data) => {
-  return `### Questions\nIf you have any questions, please send me an email at ${data.email} and I'll be quick to get back to you! Find me on GitHub at https://github.com/${data.github}\n\n`;
+  return `### Questions\nIf you have any questions, please send me an email at ${data.email} and I'll be quick to get back to you! You can also open an issue on GitHub. Find me on GitHub at https://github.com/${data.github} if you are interested in any of my other work.\n\n`;
 };
 
 const putStringTogether = (data) => {
   let string =
     header(data) +
     description(data) +
+    tableOfContents(data) +
     install(data) +
     usage(data) +
     license(data) +
