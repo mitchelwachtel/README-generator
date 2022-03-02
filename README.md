@@ -10,6 +10,7 @@ This app is to be used to take the formatting out of creating a good README.md f
 ---
 ### Table of contents
 * [Installation](#installation)
+* [Technology](#technology)
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
@@ -21,6 +22,12 @@ This app is to be used to take the formatting out of creating a good README.md f
 To install the dependencies necessary to run use the application, the user should run the following command first:
 
 `npm i`
+
+---
+
+### Technology
+
+Technologies used: node.js, npm, dependencies: 'inquirer' and 'fs', VS Code.
 
 ---
 ### Usage
