@@ -47,4 +47,3 @@ To run tests on the application, the user should run the following command:
 ---
 ### Questions
 If you have any questions, please send me an email at mitchel.wachtel@gmail.com and I'll be quick to get back to you! You can also open an issue on GitHub. Find me on GitHub at https://github.com/mitchelwachtel if you are interested in any of my other work.
-
