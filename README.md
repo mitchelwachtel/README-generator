@@ -26,8 +26,18 @@ To install the dependencies necessary to run use the application, the user shoul
 ### Usage
 The application will run through a series of questions in your terminal. Answer them thoroughly in order for the README.md file to be completed fully. The README.md file will be created in the folder "created-READMEs". The file will be named as with your project's title followed by README.md. Please rename your markdown file once it has been moved to your repository. 
 
-Watch *[this video](https://youtu.be/azwPOmFgYhM) to see the how using this app works.
+Watch *[this video](https://youtu.be/azwPOmFgYhM)* to see the how using this app works.
 
+![Input examples](./assets/images/inputs.png)
+
+![Console Response](./assets/images/console-response.png)
+
+![generated markdown pt1](./assets/images/md1.png)
+
+![generated markdown pt2](./assets/images/md2.png)
+
+---
+---
 ---
 ### License
 
